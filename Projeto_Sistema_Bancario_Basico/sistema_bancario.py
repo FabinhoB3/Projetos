@@ -31,24 +31,24 @@ while True:
     elif opcao == 2:
         print("Saque")
         #_______
-        saque = 0
-        while saque <= 0:
-            saque = float(input("Informe o valor do Saque: R$ "))
-            if saldo >= saque and numero_saques < 3 and saque <= limite :
-                saldo = saldo - saque
-                print(f"Novo Saldo: {saldo}")
-                numero_saques = numero_saques + 1
-                print(f"Numero de Saque diarios disponiveis: {LIMITE_SAQUES - numero_saques}")
-                extrato += f"Saque: R$ {saque:.2f}\n"
-            elif saque > limite:
-                print("|| Operação Invalida! Valor de saque maior que 500")
-            elif saldo <= saque:
-                print(f"|| Operação Invalida! Valor de Saque maior que Saldo. \n Saldo: {saldo} ")
-                print(f"Numero de Saque diarios disponiveis: {LIMITE_SAQUES - numero_saques}")
-                break
-            elif numero_saques >= 3:
-                print("|| Operação Invalida! Quantidade de Saques diarios excedidos. Aguarde 24h para efetuar novo saque.")
-                print(f"Numero de Saque diarios disponiveis: {LIMITE_SAQUES - numero_saques}")
+        saque = float(input("Informe o valor do Saque: R$ "))
+        if saldo >= saque and numero_saques < 3 and saque <= limite and saque > 0:
+            saldo = saldo - saque
+            print(f"Novo Saldo: {saldo}")
+            numero_saques = numero_saques + 1
+            print(f"Numero de Saque diarios disponiveis: {LIMITE_SAQUES - numero_saques}")
+            extrato += f"Saque: R$ {saque:.2f}\n"
+        elif saque > limite:
+            print("|| Operação Invalida! Valor de saque maior que 500")
+        elif saldo <= saque:
+            print(f"|| Operação Invalida! Valor de Saque maior que Saldo. \n Saldo: {saldo} ")
+            print(f"Numero de Saque diarios disponiveis: {LIMITE_SAQUES - numero_saques}")
+            break
+        elif numero_saques >= 3:
+            print("|| Operação Invalida! Quantidade de Saques diarios excedidos. Aguarde 24h para efetuar novo saque.")
+            print(f"Numero de Saque diarios disponiveis: {LIMITE_SAQUES - numero_saques}")
+        else:
+            print("Informe um valor valido")
         #_______
     elif opcao == 3:
         print("Extrato")
