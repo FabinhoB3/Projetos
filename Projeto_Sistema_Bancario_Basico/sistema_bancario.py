@@ -19,14 +19,14 @@ while True:
     if opcao == 1:
         print("Depósito")
         #_______
-        deposito = 0
-        while deposito <= 0:
-            deposito = float(input("Informe o valor do Deposito: R$ "))
-            if deposito <= 0:
-                print("Informe um valor valido!")
-        saldo = saldo + deposito
-        extrato += f"Deposito: R$ {deposito:.2f}\n"
-        print(f"Novo Saldo: R$ {saldo}")
+        deposito = float(input("Informe o valor do Deposito: R$ "))
+        if deposito <= 0:
+            print("Informe um valor valido!")
+        else:
+            saldo = saldo + deposito
+            extrato += f"Deposito: R$ {deposito:.2f}\n"
+            print(f"Novo Saldo: R$ {saldo}")
+
         #_______
     elif opcao == 2:
         print("Saque")
