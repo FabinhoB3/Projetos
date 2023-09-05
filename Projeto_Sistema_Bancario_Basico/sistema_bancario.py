@@ -43,7 +43,6 @@ while True:
         elif saldo <= saque:
             print(f"|| Operação Invalida! Valor de Saque maior que Saldo. \n Saldo: {saldo} ")
             print(f"Numero de Saque diarios disponiveis: {LIMITE_SAQUES - numero_saques}")
-            break
         elif numero_saques >= 3:
             print("|| Operação Invalida! Quantidade de Saques diarios excedidos. Aguarde 24h para efetuar novo saque.")
             print(f"Numero de Saque diarios disponiveis: {LIMITE_SAQUES - numero_saques}")
