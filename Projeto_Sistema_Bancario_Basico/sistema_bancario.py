@@ -4,8 +4,7 @@ menu = """
 [2] Sacar
 [3] Extrato
 [0] Sair
-Selecione uma opção => 
-"""
+Selecione uma opção => """
 saldo = 0
 limite = 500
 extrato = ""
