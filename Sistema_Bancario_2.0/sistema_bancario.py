@@ -55,7 +55,7 @@ def criar_usuario(usuarios):
     usuario = filtrar_usuario(cpf,usuarios)
 
     if usuario:
-        print("\n@@@ Já existe usuario com esse CPF! @@@")
+        print("\nJá existe usuario com esse CPF!")
         return # RETORNA PARA A FUNÇÃO PRINCIPAL MAIN()
      
     nome = input("Informe o nome completo: ")
